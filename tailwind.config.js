@@ -3,7 +3,12 @@ module.exports = {
     "./layouts/*.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        primary:'Poppins, sans-serif',
+        sans:'Roboto, sans-serif',
+      }
+    },
   },
   plugins: [
     require('@tailwindcss/typography'),
