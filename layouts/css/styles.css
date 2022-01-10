@@ -636,6 +636,18 @@ select{
   --tw-backdrop-sepia:  ;
 }
 
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .fixed{
   position: fixed;
 }
@@ -682,6 +694,14 @@ select{
 
 .top-\[80px\]{
   top: 80px;
+}
+
+.left-1{
+  left: 0.25rem;
+}
+
+.top-1{
+  top: 0.25rem;
 }
 
 .z-\[-1\]{
@@ -750,6 +770,10 @@ select{
   margin-left: 1rem;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
 .block{
   display: block;
 }
@@ -764,6 +788,10 @@ select{
 
 .flex{
   display: flex;
+}
+
+.table{
+  display: table;
 }
 
 .hidden{
@@ -802,6 +830,10 @@ select{
   height: 10rem;
 }
 
+.h-4\/5{
+  height: 80%;
+}
+
 .min-h-screen{
   min-height: 100vh;
 }
@@ -820,6 +852,18 @@ select{
 
 .w-4\/5{
   width: 80%;
+}
+
+.w-20{
+  width: 5rem;
+}
+
+.w-2\/5{
+  width: 40%;
+}
+
+.w-6\/12{
+  width: 50%;
 }
 
 .rotate-180{
@@ -854,6 +898,10 @@ select{
 
 .justify-between{
   justify-content: space-between;
+}
+
+.overflow-hidden{
+  overflow: hidden;
 }
 
 .overflow-y-auto{
@@ -893,8 +941,17 @@ select{
   border-width: 0px;
 }
 
+.border-2{
+  border-width: 2px;
+}
+
 .border-none{
   border-style: none;
+}
+
+.border-cyan-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(165 243 252 / var(--tw-border-opacity));
 }
 
 .bg-gray-100{
@@ -949,6 +1006,31 @@ select{
 .bg-cyan-400{
   --tw-bg-opacity: 1;
   background-color: rgb(34 211 238 / var(--tw-bg-opacity));
+}
+
+.bg-rose-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 164 175 / var(--tw-bg-opacity));
+}
+
+.bg-cyan-800{
+  --tw-bg-opacity: 1;
+  background-color: rgb(21 94 117 / var(--tw-bg-opacity));
+}
+
+.bg-cyan-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(165 243 252 / var(--tw-bg-opacity));
+}
+
+.bg-cyan-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(103 232 249 / var(--tw-bg-opacity));
+}
+
+.bg-cyan-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r{
@@ -1165,6 +1247,11 @@ select{
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 
+.text-cyan-900{
+  --tw-text-opacity: 1;
+  color: rgb(22 78 99 / var(--tw-text-opacity));
+}
+
 .antialiased{
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1190,6 +1277,12 @@ select{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-2xl{
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1204,8 +1297,24 @@ select{
   transition-duration: 500ms;
 }
 
+.duration-200{
+  transition-duration: 200ms;
+}
+
 .ease-in{
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.hover\:scale-100:hover{
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:scale-105:hover{
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .hover\:bg-indigo-600:hover{
@@ -1226,6 +1335,11 @@ select{
 .hover\:bg-cyan-500:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(6 182 212 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-cyan-100:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(207 250 254 / var(--tw-bg-opacity));
 }
 
 .hover\:text-cyan-500:hover{
@@ -1255,6 +1369,19 @@ select{
 
 .focus-visible\:bg-none:focus-visible{
   background-image: none;
+}
+
+.peer:checked ~ .peer-checked\:left-9{
+  left: 2.25rem;
+}
+
+.peer:checked ~ .peer-checked\:left-11{
+  left: 2.75rem;
+}
+
+.peer:checked ~ .peer-checked\:bg-rose-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(225 29 72 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px){
