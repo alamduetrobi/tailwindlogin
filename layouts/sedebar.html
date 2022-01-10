@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <title>Tailwind Sidebar</title>
+  </head>
+  <body class="bg-blue-600 font-[Poppins]">
+    <span
+      class="absolute text-4xl text-white cursor-pointer top-5 left-4"
+      onclick="Open()"
+    >
+      <i class="px-2 bg-gray-900 rounded-md bi bi-filter-left"></i>
+    </span>
+    <div
+      class="bg-gray-900 w-[300px] sidebar fixed top-0 bottom-0 lg:left-0 left-[-300px] p-2 overflow-y-auto text-center"
+    >
+      <div class="text-xl text-gray-100">
+        <div class="p-2.5 mt-1 flex items-center">
+          <i class="px-2 py-1 bg-blue-600 rounded-md bi bi-app-indicator"></i>
+          <h1 class="font-bold text-gray-200 text-[15px] ml-3">Tailwindbar</h1>
+          <i
+            class="ml-20 cursor-pointer bi bi-x lg:hidden"
+            onclick="Open()"
+          ></i>
+        </div>
+        <hr class="my-2 text-gray-600" />
+      </div>
+      <div
+        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer bg-gray-700 text-white"
+      >
+        <i class="text-sm bi bi-search"></i>
+        <input
+          type="text"
+          placeholder="Search"
+          class="text-[15px] ml-4 w-full bg-transparent focus:outline-none border-none"
+        />
+      </div>
+      <div
+        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+      >
+        <i class="bi bi-house-door-fill"></i>
+        <span class="text-[15px] ml-4 text-gray-200"><a href="#">Home</a></span>
+      </div>
+      <div
+        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+      >
+        <i class="bi bi-bookmark-fill"></i>
+        <span class="text-[15px] ml-4 text-gray-200"
+          ><a href="#">Bookmakr</a></span
+        >
+      </div>
+      <hr class="my-4 text-gray-600" />
+      <div
+        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+        onclick="dropdown()"
+      >
+        <i class="bi bi-chat-left-text-fill"></i>
+        <div class="flex items-center justify-between w-full">
+          <span class="text-[15px] ml-4 text-gray-200"> Chatbox</span>
+          <span class="text-sm rotate-180" id="arrow">
+            <i class="bi bi-chevron-down"></i>
+          </span>
+        </div>
+      </div>
+      <div
+        id="submenu"
+        class="w-4/5 mx-auto mt-2 text-sm font-thin text-left text-gray-200"
+      >
+        <h1 class="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600">
+          Social
+        </h1>
+        <h1 class="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600">
+          Personal
+        </h1>
+        <h1 class="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600">
+          Finances
+        </h1>
+        <h1 class="p-2 mt-1 rounded-md cursor-pointer hover:bg-gray-600">
+          Portfoio
+        </h1>
+      </div>
+      <div
+        class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white"
+      >
+        <i class="bi bi-box-arrow-in-right"></i>
+        <span class="text-[15px] ml-4 text-gray-200"
+          ><a href="#">Logout</a></span
+        >
+      </div>
+    </div>
+    <script>
+      function dropdown() {
+        document.querySelector("#submenu").classList.toggle("hidden");
+        document.querySelector("#arrow").classList.toggle("rotate-0");
+      }
+      dropdown();
+
+      //   function open() {
+      //     document.querySelector(".sidebar").classList.toggle("left-[-300px]");
+      //   }
+      //   open();
+
+      function Open() {
+        document.querySelector(".sidebar").classList.toggle("left-[-300px]");
+      }
+    </script>
+  </body>
+</html>
